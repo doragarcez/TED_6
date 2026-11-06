@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #000;
+  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  color: #3b1030;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 32px 36px 28px;
+  background: #cc79a7;
+  border-radius: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.emoji {
+  font-size: 30px;
+}
+
+.pontos {
+  font-size: 17px;
+}
+
+.pontos strong {
+  font-size: 22px;
+}
+
+/* Área do jogo */
+.tabuleiro {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 4px solid #3b1030;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tela de GAMEOVER sobre o tabuleiro */
+.fim {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(59, 16, 48, 0.88);
+  color: #f7e3ee;
+}
+
+.fim[hidden] {
+  display: none;
+}
+
+.gameover {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.resultado {
+  font-size: 18px;
+}
+
+.resultado strong {
+  font-size: 24px;
+}
+
+button {
+  margin-top: 6px;
+  padding: 12px 34px;
+  border: none;
+  border-radius: 30px;
+  background: #f7e3ee;
+  color: #3b1030;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fff;
+}
+
+button:focus-visible {
+  outline: 3px solid #cc79a7;
+  outline-offset: 2px;
+}
+
+.dica {
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 28px 20px 24px;
+    border-radius: 60px;
+  }
+
+  .gameover {
+    font-size: 32px;
+  }
+}
